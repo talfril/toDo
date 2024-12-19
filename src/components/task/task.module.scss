@@ -1,0 +1,22 @@
+.card {
+    display: flex;
+    align-items: center;
+    max-height: 10vh;
+  }
+  
+  .icon {
+    display: flex;
+    align-items: center;
+    margin-right: 8px;
+  }
+  
+  .completedIcon {
+    color: #4caf50; 
+  }
+
+  
+  .content {
+    flex: 1;
+    padding: 8px;
+  }
+  

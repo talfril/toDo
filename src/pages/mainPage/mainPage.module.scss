@@ -1,0 +1,15 @@
+.taskList{
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  max-width: 60vw;
+
+  &__tablet {
+    max-width: 75vw;
+  }
+
+  &__mobile {
+    max-width: 90vw;
+
+  }
+}
