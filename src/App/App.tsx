@@ -1,9 +1,7 @@
-import "./App.module.scss";
 import { ThemeProvider } from "@mui/material/styles";
-import MainPage from "../pages/mainPage/mainPage";
+import MainPage from "../pages";
 import { theme } from "../theme";
 import React from "react";
-
 
 function App() {
   return (

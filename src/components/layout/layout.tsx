@@ -8,14 +8,13 @@ interface LayoutProps {
 
 export const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <main className={styles.pageStyle}>
-      <Box>
+      <Box className={styles.pageStyle}>
         <Typography component="h1" variant="h1" color="primary" className={styles.title}>
           ToDo list
-        </Typography>
+        </Typography> 
         {children} 
       </Box>
-    </main>
+    
   );
 };
 

@@ -114,6 +114,19 @@ export const theme = createTheme({
         },
       },
     },
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          backgroundColor: "#4caf50",  
+          transition: "background-color 1.3s ease-in-out, transform 1.3s ease-in-out",
+          "&:hover": {
+            backgroundColor: "#388e3c",  
+            transform: "scale(1.5)", 
+          },
+        },
+      },
+    },
+    
     MuiInputLabel: {
       styleOverrides: {
         root: {

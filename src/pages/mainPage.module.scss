@@ -1,0 +1,22 @@
+.taskList{
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  max-width: 60vw;
+
+  &__tablet {
+    max-width: 75vw;
+  }
+
+  &__mobile {
+    max-width: 90vw;
+
+  }
+}
+
+.addTaskButton {
+  position: fixed;
+  top: 5vh;
+  right: 5vw;
+  z-index: 10;
+}
