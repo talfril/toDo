@@ -21,6 +21,7 @@ export const theme = createTheme({
     fontFamily: "Lunasima-Regular, sans-serif",
     h1: {
       fontFamily: "flamefiretype, sans-serif",
+      fontSize: "clamp(2rem, 5vw, 4rem)",  // Использование clamp для адаптивного размера шрифта
     },
     h2: {
       fontFamily: "Lunasima-Bold', sans-serif",
@@ -125,7 +126,6 @@ export const theme = createTheme({
         },
       },
     },
-    
     MuiInputLabel: {
       styleOverrides: {
         root: {
@@ -168,7 +168,16 @@ export const theme = createTheme({
     MuiInputBase: {
       styleOverrides: {
         input: {
-          color: "#000000",
+          color: "#ffffff", 
+        },
+      },
+    },
+    MuiTextField: {
+      styleOverrides: {
+        root: {
+          "& .MuiInputBase-input": {
+            color: "#ffffff",  
+          },
         },
       },
     },

@@ -7,7 +7,7 @@ import Loading from "../components/loading/loading";
 import Layout from "../components/layout/layout";
 import { useRouter } from "next/router";
 import { useSelector, useDispatch } from "react-redux";
-import { setTasks } from "../store/tasksSlice";
+import { setTasks} from "../store/tasksSlice";
 import { RootState } from "../store/store";
 
 export const MainPage = () => {
@@ -45,23 +45,30 @@ export const MainPage = () => {
     router.push("/addTaskPage");
   };
 
+  const toggleTaskCompletion = (taskId: number) => {
+    const updatedTasks = tasks.map((task) =>
+      task.id === taskId ? { ...task, completed: !task.completed } : task
+    );
+    dispatch(setTasks(updatedTasks));
+  };
+
+  const deleteTask = (taskId: number) => {
+    const updatedTasks = tasks.filter((task) => task.id !== taskId);
+    dispatch(setTasks(updatedTasks));
+  };
+
   return (
     <>
       <Button
-        aria-label='Добавить новую задачу'
+        aria-label="Добавить новую задачу"
         className={styles.addTaskButton}
-        variant='contained'
+        variant="contained"
         onClick={handleAddTaskClick}
       >
         <AddIcon />
       </Button>
       <Layout>
-        <Typography
-          component='h1'
-          variant='h1'
-          color='primary'
-          className={styles.title}
-        >
+        <Typography component="h1" variant="h1" color="primary" className={styles.title}>
           ToDo list
         </Typography>
         <Box className={styles.taskList}>
@@ -74,6 +81,8 @@ export const MainPage = () => {
                 id={task.id}
                 title={task.title}
                 completed={task.completed}
+                onToggleCompleted={() => toggleTaskCompletion(task.id)} 
+                onDelete={() => deleteTask(task.id)} 
                 onClick={() => router.push(`/tasks/${task.id}`)}
               />
             ))
