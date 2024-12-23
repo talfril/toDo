@@ -21,7 +21,7 @@ export const theme = createTheme({
     fontFamily: "Lunasima-Regular, sans-serif",
     h1: {
       fontFamily: "flamefiretype, sans-serif",
-      fontSize: "clamp(2rem, 5vw, 4rem)",  // Использование clamp для адаптивного размера шрифта
+      fontSize: "clamp(2rem, 5vw, 4rem)",  
     },
     h2: {
       fontFamily: "Lunasima-Bold', sans-serif",
