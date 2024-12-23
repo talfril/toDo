@@ -18,3 +18,10 @@
   left: 80vw;
   z-index: 10;
 }
+
+@media (max-width: 480px) {
+  .returnButton {
+    position: static;
+  }
+  
+}

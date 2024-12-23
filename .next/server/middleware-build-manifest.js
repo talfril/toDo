@@ -29,11 +29,6 @@ self.__BUILD_MANIFEST = {
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/addTaskPage.js"
-    ],
-    "/tasks/[id]": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/tasks/[id].js"
     ]
   },
   "ampFirstPages": []
