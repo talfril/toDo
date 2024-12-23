@@ -11,19 +11,3 @@
     min-width: 20vw;
     max-width: 40vw;
 }
-
-.returnButton {
-  position: fixed;
-  top: 5vh;
-  left: 80vw;
-  z-index: 10;
-}
-
-@media (max-width: 480px) {
-  .returnButton {
-    position: static;
-    top: 0;
-    left: 0;
-  }
-  
-}
