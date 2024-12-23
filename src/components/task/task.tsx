@@ -2,26 +2,25 @@ import React from "react";
 import { Card, CardContent, Typography } from "@mui/material";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import RadioButtonUncheckedIcon from "@mui/icons-material/RadioButtonUnchecked";
-
-
 import styles from "./task.module.scss";
 
 interface TaskProps {
   id: number;
   title: string;
   completed: boolean;
+  onClick: () => void; 
 }
 
-export const Task: React.FC<TaskProps> = ({ id, title, completed }) => {
+export const Task: React.FC<TaskProps> = ({ id, title, completed, onClick }) => {
   return (
-    <Card className={styles.card}>
+    <Card className={styles.card} onClick={onClick}> 
       <div className={styles.icon}>
         {completed ? (
           <CheckCircleIcon className={styles.completedIcon} />
         ) : (
           <RadioButtonUncheckedIcon/>
-
-        )}</div>
+        )}
+      </div>
       <CardContent className={styles.content}>
         <Typography className={styles.id} variant='body2'>
           #{id}

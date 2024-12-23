@@ -1,12 +1,9 @@
 .pageStyle {
-    padding: 30px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-
-.title{
-  text-align: center;
-  cursor: pointer;
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; 
+  min-height: 100vh; 
+  gap: 5vh;
 }

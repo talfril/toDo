@@ -1,0 +1,20 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  align-items: center;
+  min-width: 60vw;
+  max-width: 90vw;
+}
+
+.formButton{
+    min-width: 20vw;
+    max-width: 40vw;
+}
+
+.returnButton {
+  position: absolute;
+  top: 5vh;
+  right: 5vw;
+  z-index: 10;
+}
