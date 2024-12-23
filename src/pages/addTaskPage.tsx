@@ -33,7 +33,6 @@ const AddTaskPage: React.FC = () => {
 
   return (
     <Layout>
-      {" "}
       <Button
         aria-label='Добавить новую задачу'
         className={styles.returnButton}
